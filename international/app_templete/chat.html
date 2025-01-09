@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+  <div class="chat-container">
+    <h2>Global Chat</h2>
+    
+    <!-- User Status Section -->
+    <div id="online-users" class="online-users">
+      <h3>Online Users</h3>
+      <ul id="user-list"></ul>
+    </div>
+
+    <!-- Chat Box -->
+    <div id="chat-box" class="chat-box">
+      <!-- Messages will be displayed here -->
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="typing-indicator" class="typing-indicator"></div>
+
+    <!-- Chat Input Section -->
+    <div class="chat-input">
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <script type="module" src="chat.js"></script>
+</body>
+</html>

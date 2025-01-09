@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="userRegistulation.css">
+</head>
+<body>
+
+  <div id="admin-auth">
+    <h2>Admin Login</h2>
+    <input type="email" id="admin-email" placeholder="Admin Email" required>
+    <input type="password" id="admin-password" placeholder="Admin Password" required>
+    <button id="admin-login-btn">Log In</button>
+    <p id="otp-section" style="display: none;">
+      <input type="text" id="admin-otp" placeholder="Enter OTP">
+      <button id="verify-otp-btn">Verify OTP</button>
+    </p>
+    <p id="login-status"></p>
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

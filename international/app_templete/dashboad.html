@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="dashboad.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Dashboard Container -->
+  <div class="dashboard-container">
+    <h1>User Dashboard</h1>
+
+    <!-- Coin Summary -->
+    <div class="coin-summary">
+      <h2>Total Coins: <span id="total-coins">0</span></h2>
+      <p>Dollar Value: <span id="dollar-value">$0.00</span></p>
+      <ul id="coin-breakdown">
+        <!-- Breakdown will be dynamically loaded -->
+      </ul>
+      <p>Conversion Rate: <strong>3000 coins = $0.4</strong></p>
+    </div>
+
+    <!-- Wallet Section -->
+    <div class="wallet-section">
+      <h2>Wallet</h2>
+      
+      <!-- Transfer Coins -->
+      <div class="transfer-section">
+        <h3>Transfer Coins</h3>
+        <input type="email" id="recipient-email" placeholder="Recipient's Email">
+        <input type="number" id="transfer-amount" placeholder="Amount of Coins">
+        <button id="transfer-btn">Transfer</button>
+        <p id="transfer-status"></p>
+      </div>
+
+      <!-- Withdraw Coins -->
+      <div class="withdraw-section">
+        <h3>Withdraw Coins</h3>
+        <input type="text" id="account-name" placeholder="Account Name">
+        <input type="text" id="account-number" placeholder="Account Number">
+        <input type="text" id="bank-name" placeholder="Bank Name">
+        <input type="number" id="withdraw-amount" placeholder="Coins to Withdraw">
+        <button id="withdraw-btn">Withdraw</button>
+        <p id="withdraw-status"></p>
+      </div>
+    </div>
+
+    <!-- Transaction History -->
+    <div class="transaction-history">
+      <h2>Transaction History</h2>
+      <div class="filter-section">
+        <label for="filter-type">Filter by Type:</label>
+        <select id="filter-type">
+          <option value="all">All</option>
+          <option value="withdrawal">Withdrawals</option>
+          <option value="transfer">Transfers</option>
+        </select>
+      </div>
+      <table id="transaction-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Transactions will be dynamically loaded -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Earning Stats -->
+    <div class="earning-stats">
+      <h2>Earning Stats</h2>
+      <canvas id="earnings-chart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- Referral System -->
+    <div class="referral-section">
+      <h2>Referral System</h2>
+      <p>Your Referral Code: <span id="referral-code">Loading...</span></p>
+      <button id="copy-referral-btn">Copy Referral Code</button>
+      <button id="share-referral-btn">Share Referral Link</button>
+      <p id="referral-status"></p>
+    </div>
+
+    <!-- Notification Center -->
+    <div class="notification-center">
+      <h2>Notifications</h2>
+      <ul id="notification-list">
+        <!-- Notifications will be dynamically loaded -->
+      </ul>
+    </div>
+
+    <!-- Withdrawal Status -->
+    <div class="withdrawal-status">
+      <h2>Withdrawal Status</h2>
+      <ul id="withdrawal-list">
+        <!-- Withdrawal requests will be dynamically loaded -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="btn">
+    <button type="button" id="explore">Earn</button>
+  </div>
+
+  <script type="module" src="dashboad.js"></script>
+</body>
+</html>

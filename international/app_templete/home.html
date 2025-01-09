@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1 id="greeting">Hello!</h1>
+    <p id="time-greeting"></p>
+  </header>
+
+  <div class="btn-dashbord">
+    <button id="dashboad">Dashboard </button>
+  </div>
+
+  <!-- Theme Selector
+  <div class="theme-selector">
+    <h2>Select Theme</h2>
+    <select  id="theme-dropdown">
+      <option value="light">Light</option>
+      <option value="dark" selected>Dark</option>
+      <option value="colorful">Colorful</option>
+    </select>
+  </div> -->
+
+  <!-- Progress Bar Section -->
+  <div class="progress-container">
+    <h2>Hourly Progress</h2>
+    <div id="progress-bar-container" class="progress-bar-container">
+      <div id="progress-bar" class="progress-bar"></div>
+      <span id="progress-text" class="progress-text">0%</span>
+    </div>
+    <button id="claim-coins" disabled>Claim 100 Coins</button>
+    <p id="total-coins">Total Coins: 0</p>
+    <p id="last-claim-time">Last Claimed: Never</p>
+  </div>
+
+  <!-- Navigation Section -->
+  <div class="navigation-buttons">
+    <button type="button" id="home">Home</button>
+    <button type="button" id="Notification">Notification</button>
+    <button type="button" id="chat">Chat</button>
+    <button type="button" id="setting">Setting</button>
+  </div>
+
+  <script type="module" src="home.js"></script>
+  <script src="navigation.js"></script>
+  <script type="module" src="prograss.js"></script>
+</body>
+</html>

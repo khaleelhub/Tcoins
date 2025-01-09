@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Signup</title>
+  <link rel="stylesheet" href="userRegistulation.css">
+</head>
+<body>
+  <div class="adm" id="adm"> ------------------</div>
+  <div id="auth">
+    <!-- Signup Form -->
+    <div id="signup-form" class="form active">
+      <h2>Sign Up</h2>
+      <input type="email" id="signup-email" placeholder="Enter your email" required>
+      <input type="password" id="signup-password" placeholder="Enter your password (min 8 chars)" required>
+      <button id="signup-btn">Sign Up</button>
+      <a href="#" id="show-login">Already have an account? Log In</a>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form" class="form">
+      <h2>Log In</h2>
+      <input type="email" id="login-email" placeholder="Enter your email" required>
+      <input type="password" id="login-password" placeholder="Enter your password" required>
+      <button id="login-btn">Log In</button>
+      <a href="#" id="show-signup">Don't have an account? Sign Up</a>
+      <a href="#" id="forgot-pass">Forgot Password?</a>
+    </div>
+  </div>
+
+  <script type="module" src="userRegistulation.js"></script>
+</body>
+</html>

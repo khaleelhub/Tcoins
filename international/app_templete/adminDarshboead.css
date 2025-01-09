@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a1a, #121212);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.admin-dashboard {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  animation: fade-in 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #4caf50;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+/* Statistics Section */
+.stats-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.stats-section li {
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+table th {
+  background-color: #4caf50;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+table td {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.deactivate-btn {
+  background-color: #ff9800;
+  color: white;
+}
+
+.reset-coins-btn {
+  background-color: #00acc1;
+  color: white;
+}
+
+.approve-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.decline-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-ad-btn, .delete-ad-btn {
+  margin-right: 5px;
+  padding: 8px;
+}
+
+/* Form Styles */
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+form input, form select, form button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2a2a2a;
+  color: white;
+}
+
+form button {
+  flex: 0.5;
+  background-color: #4caf50;
+}
+
+form button:hover {
+  background-color: #81c784;
+}
+
+/* Footer */
+.dashboard-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats-section ul {
+    grid-template-columns: 1fr;
+  }
+
+  table th, table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-footer {
+    font-size: 0.8rem;
+  }
+}

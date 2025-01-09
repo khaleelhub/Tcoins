@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="adminDarshboead.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Dashboard Container -->
+  <div class="admin-dashboard">
+    <header class="dashboard-header">
+      <h1>Admin Dashboard</h1>
+      <p>Manage users, ads, and transactions efficiently!</p>
+    </header>
+
+    <!-- Platform Statistics -->
+    <div class="stats-section">
+      <h2>Platform Statistics</h2>
+      <ul>
+        <li>Total Users: <span id="total-users">0</span></li>
+        <li>Total Coins Distributed: <span id="total-coins-distributed">0</span></li>
+        <li>Dollar Value of Coins: <span id="coins-to-dollars">$0.00</span></li>
+        <li>Active Ads: <span id="active-ads">0</span></li>
+        <li>Total Earnings: <span id="total-earnings">$0.00</span></li>
+      </ul>
+    </div>
+
+    <!-- User Management -->
+    <div class="user-management">
+      <h2>User Management</h2>
+      <table id="users-table">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Coins</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- User rows will be dynamically loaded -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Withdrawal Requests -->
+    <div class="withdrawal-requests">
+      <h2>Withdrawal Requests</h2>
+      <table id="withdrawals-table">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Amount</th>
+            <th>Account Details</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Withdrawal rows will be dynamically loaded -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Ad Management -->
+    <div class="ad-management">
+      <h2>Ad Management</h2>
+      <form id="add-ad-form">
+        <input type="text" id="ad-name" placeholder="Ad Name" required>
+        <select id="ad-type" required>
+          <option value="text">Text</option>
+          <option value="image">Image</option>
+          <option value="video">Video</option>
+        </select>
+        <input type="url" id="ad-url" placeholder="Ad URL" required>
+        <button type="submit">Add Ad</button>
+      </form>
+      <ul id="ads-list">
+        <!-- Ad items will be dynamically loaded -->
+      </ul>
+    </div>
+
+    <!-- Earning Stats -->
+    <div class="earning-stats">
+      <h2>Earning Stats</h2>
+      <canvas id="earnings-chart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+      <p>&copy; 2025 T-Coins. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script type="module" src="adminDarshboead.js"></script>
+</body>
+</html>

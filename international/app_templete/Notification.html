@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Updates and Ads</title>
+  <link rel="stylesheet" href="Nofication.css">
+</head>
+<body>
+
+  <!-- Coin Balance Display -->
+  <div class="coins-container">
+    <h2 id="coins-display">Coins: 0</h2>
+  </div>
+
+  <!-- Updates Section -->
+  <div class="updates-container">
+    <h2>Updates Feed</h2>
+
+    <!-- Post an Update -->
+    <div class="post-update">
+      <textarea id="update-input" placeholder="Share an update..."></textarea>
+      <button id="post-update-btn">Post Update</button>
+    </div>
+
+    <!-- Updates Feed -->
+    <div id="updates-feed" class="updates-feed">
+      <!-- Updates will be dynamically loaded here -->
+    </div>
+  </div>
+
+  <!-- Ads Section -->
+  <div class="ads-container">
+    <h2>Ads</h2>
+    <div id="ads-grid" class="ads-grid">
+      <!-- Ads will be dynamically loaded -->
+    </div>
+  </div>
+
+  <script type="module" src="Nofication.js"></script>
+</body>
+</html>

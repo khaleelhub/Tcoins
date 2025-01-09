@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* Coin Balance Display */
+.coins-container {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-radius: 15px;
+  box-shadow: 8px 8px 15px #0e0e0e, -8px -8px 15px #2e2e2e;
+}
+
+#coins-display {
+  font-size: 28px;
+  color: #4caf50;
+  text-shadow: 2px 2px 5px rgba(0, 255, 0, 0.3);
+}
+
+/* Updates Section */
+.updates-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-radius: 15px;
+  box-shadow: 8px 8px 15px #0e0e0e, -8px -8px 15px #2e2e2e;
+}
+
+.updates-container h2 {
+  text-align: center;
+  color: #4caf50;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.post-update {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#update-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 7px;
+  background-color: #2a2a2a;
+  color: white;
+  border: none;
+  resize: none;
+  font-size: 14px;
+}
+
+#post-update-btn {
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#post-update-btn:hover {
+  background-color: #81c784;
+  transform: scale(1.05);
+}
+
+/* Updates Feed */
+.updates-feed {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 7px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.7), inset -2px -2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.update {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 7px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.update:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.update h4 {
+  color: #4caf50;
+  font-size: 18px;
+}
+
+.update p {
+  color: #bbbbbb;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.update .actions button {
+  margin-right: 10px;
+  background-color: transparent;
+  color: #4caf50;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.update .actions button:hover {
+  background-color: #4caf50;
+  color: #1a1a1a;
+}
+
+/* Ads Section */
+.ads-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-radius: 15px;
+  box-shadow: 8px 8px 15px #0e0e0e, -8px -8px 15px #2e2e2e;
+}
+
+.ads-container h2 {
+  text-align: center;
+  color: #ff9800;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.ads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.ad-box {
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ad-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ad-box img,
+.ad-box video {
+  width: 100%;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.ad-box p {
+  font-size: 14px;
+  color: #bbbbbb;
+  margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .updates-container,
+  .ads-container {
+    width: 95%;
+  }
+
+  #post-update-btn {
+    font-size: 12px;
+  }
+
+  .ad-box {
+    font-size: 14px;
+  }
+
+  .ads-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
